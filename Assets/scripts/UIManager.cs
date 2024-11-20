@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverPanel;  // Panel de Fin de Juego
     public GameObject player;  // El jugador
     public GameObject obstacles;  // Obstáculos
+    public GameObject pausass;  // Obstáculos
 
     private bool isGamePaused = false;
     private PlayerScript playerScript; 
@@ -31,6 +32,7 @@ public class UIManager : MonoBehaviour
         gameOverPanel.SetActive(false);  // Ocultar el panel de fin de juego
         player.SetActive(true);  // Activar al jugador
         obstacles.SetActive(true);  // Activar los obstáculos
+        pausass.SetActive(true);
         Time.timeScale = 1;  // Asegurarse de que el juego se ejecute a velocidad normal
     }
 
@@ -54,6 +56,7 @@ public class UIManager : MonoBehaviour
         gameOverPanel.SetActive(true);  // Mostrar el panel de fin de juego
         player.SetActive(false);  // Desactivar al jugador
         obstacles.SetActive(false);  // Desactivar los obstáculos
+        pausass.SetActive(false);
         Time.timeScale = 0;  // Detener el juego
     }
 
